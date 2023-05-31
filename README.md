@@ -150,13 +150,13 @@ ngrok http 8000
 ```
 
 Isso criará um túnel seguro e fornecerá um URL público temporário que redireciona para o seu servidor local em http://localhost:8000/. Como mostra a figura abaixo.
-
 ![](ngrok.jpg?raw=true)
 
 Configurando o Ngrok no Microsoft Dynamics
 Agora que temos o URL público do Ngrok, podemos configurá-lo no Microsoft Dynamics para receber as notificações do webhook. Acesse o Microsoft Dynamics e encontre a seção de configurações de webhook. Adicione o URL fornecido pelo Ngrok (por exemplo, https://2889-200-18-170-200.ngrok-free.app) como o endpoint do webhook.
 
 Para este teste utilizei o CRM Educacional que roda no Microsoft Dynamics, onde o mesmo possui o campo expecifico para adicionar a URL como mostra a imagem abaixo.
+![](crm.png?raw=true)
 
 A partir de agora, sempre que o candidato realizar uma inscrição e os requisitos de negócio cumpridos oo Microsoft Dynamics enviar uma requisição para o webhook, ele será recebido pelo seu servidor Django localmente e os dados serão processados e armazenados no banco de dados.
 
